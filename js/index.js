@@ -41,10 +41,8 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-// Update to show the circle image
-let codeImg = document.getElementById("cta-img");
-codeImg.setAttribute('src', siteContent["cta"]["img-src"])
 
-// Updated to show the middle large image
-let codeMidImg = document.getElementById("middle-img"):
-codeMidImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+// Updated to show the nav words
+let navItems = document.querySelectorAll('a')
+navItems.forEach((item, index) => item.textContent = siteContent["nav"][`nav-item-${index++}`])
+
