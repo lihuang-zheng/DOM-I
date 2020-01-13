@@ -40,3 +40,7 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Update to show the circle image
+let codeImg = document.getElementById("cta-img");
+codeImg.setAttribute('src', siteContent["cta"]["img-src"])
