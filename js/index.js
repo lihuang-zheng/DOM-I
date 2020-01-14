@@ -39,4 +39,73 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+
+// Updated to show the nav words
+let navItems = document.querySelectorAll('a');
+navItems.forEach((item, index) => item.textContent = siteContent["nav"][`nav-item-${index++}`]);
+
+// Change color of nav links
+navItems.forEach(item => item.style.color = "green");
+
+// Add items with append and prepend
+let nav = document.querySelector('nav');
+
+let firstItem = document.createElement('a');
+let lastItem = document.createElement('a');
+
+firstItem.href = "#";
+firstItem.textContent = "First Item";
+
+firstItem.href = "#";
+lastItem.textContent = "Last Item";
+
+nav.prepend(firstItem);
+nav.appendChild(lastItem);
+
+
+// CTA
+let headingOne = document.querySelector('h1');
+headingOne.textContent = siteContent["cta"]["h1"];
+
+
+let button = document.querySelector('button');
+button.textContent = siteContent["cta"]["button"];
+
+
+let ctaImg = document.querySelector('#cta-img');
+ctaImg.src = siteContent["cta"]["img-src"];
+
+
+
+// Middle image
+let middleImage = document.querySelector('#middle-img');
+middleImage.src = siteContent["main-content"]["middle-img-src"];
+
+
+
+// Main Contents
+
+// H4 contents
+let headingFour = document.querySelectorAll('h4');
+
+headingFour[0].textContent = siteContent["main-content"]["features-h4"];
+headingFour[1].textContent = siteContent["main-content"]["about-h4"];
+headingFour[2].textContent = siteContent["main-content"]["services-h4"];
+headingFour[3].textContent = siteContent["main-content"]["product-h4"];
+headingFour[4].textContent = siteContent["main-content"]["vision-h4"];
+headingFour[5].textContent = siteContent["contact"]["contact-h4"];
+
+// Paragraph contents
+let paragraphs = document.querySelectorAll('p');
+
+paragraphs[0].textContent = siteContent["main-content"]["features-content"];
+paragraphs[1].textContent = siteContent["main-content"]["about-content"];
+paragraphs[2].textContent = siteContent["main-content"]["services-content"];
+paragraphs[3].textContent = siteContent["main-content"]["product-content"];
+paragraphs[4].textContent = siteContent["main-content"]["vision-content"];
+paragraphs[5].textContent = siteContent["contact"]["address"];
+paragraphs[6].textContent = siteContent["contact"]["phone"];
+paragraphs[7].textContent = siteContent["contact"]["email"];
+paragraphs[8].textContent = siteContent["footer"]["copyright"];
